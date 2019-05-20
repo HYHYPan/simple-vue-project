@@ -8,7 +8,7 @@ import Loading from 'vue-loading-overlay';
 // Import stylesheet
 import 'vue-loading-overlay/dist/vue-loading.css';
 import 'bootstrap';
-
+import currencyFilter from './filters/currency';
 
 import App from './App';
 import router from './router';
@@ -20,6 +20,8 @@ Vue.use(VueAxios, axios);
 axios.defaults.withCredentials = true;
 
 Vue.component('Loading', Loading);
+Vue.filter('currency',currencyFilter);
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
